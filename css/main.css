@@ -1,0 +1,274 @@
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+
+/* COLORS */
+
+:root {
+    --color-red: #d03b40;
+    --color-beige: #ded6c0;
+    --color-white: #f5f0ed;
+    --color-gray: #241d1b;
+    --color-lightGray: #f5f0ed;
+    --color-strongGray: #3c3c3b;
+}
+
+/* RESET */
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* GENERAL STYLES */
+
+h1 {
+    /* font-size: 44px; ALL */
+    font-size: 37px; /* MOBILE */
+}
+
+h2 {
+    font-size: 31px;
+}
+
+h3 {
+    font-size: 27px;
+}
+
+p {
+    font-size: 19px;
+}
+
+button {
+    font-size: 17px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+    margin: 40px 130px;
+}
+
+/* HEADER */
+
+header {
+    background-image: url("../img/Fondo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+}
+
+header h1, header p {
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 30px;
+}
+
+header p {
+    padding: 0 15px 100px;
+}
+
+header .logo {
+    height: 40px;
+    padding: 10px 30px 30px;
+}
+
+header nav {
+    height: 80px;
+    width: 100%;
+}
+
+header nav ul {
+    float: right;
+    margin-right: 30px;
+}
+
+header nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+header nav ul li a {
+    color: var(--color-white);
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+header nav ul li a.active, header nav ul li a:hover {
+    background-color: rgba(60, 60, 59, .6);
+    transition: 0.5s;
+}
+
+.menu-check-btn {
+    font-size: 40px;
+    color: var(--color-white);
+    float: right;
+    line-height: 80px;
+    background-color: transparent;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-check {
+    display: none;
+}
+
+/* RESTAURANT */
+
+.restaurant-container h2 {
+    margin-bottom: 30px;
+}
+
+.restaurant-sunday {
+    background-color: var(--color-red);
+    color: var(--color-beige);
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.restaurant-celebration {
+    background-color: var(--color-beige);
+    color: var(--color-red);
+    text-align: center;
+    padding: 50px 15px;
+}
+
+/* BREAKFAST */
+
+.breakfast-container {
+    background-image: url("../img/Fondo2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.breakfast-container button {
+    padding: 15px;
+    background-color: transparent;
+    border: 3px solid var(--color-beige);
+    color: var(--color-beige);
+}
+
+.breakfast-container p {
+    margin-bottom: 40px;
+}
+
+/* PRODUCTS */
+
+.product-container {
+    background-color: var(--color-white);
+    padding: 10px 0px;
+}
+
+.product {
+    padding: 30px 15px;
+}
+
+.product h3 {
+    color: var(--color-strongGray);
+}
+
+.product p {
+    color: var(--color-gray);
+    line-height: 30px;
+}
+
+.product figure {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 110px;
+}
+
+/* CONTACT */
+
+.contact-container h2 {
+    margin-bottom: 30px;
+}
+
+.contact-contact {
+    background-color: var(--color-beige);
+    color: var(--color-red);
+    text-align: center;
+    padding: 60px 15px;
+}
+
+.contact-contact a {
+    color: inherit;
+    font-weight: bold;
+}
+
+.contact-contact a:visited {
+    color: inherit;
+    font-weight: bold;
+}
+
+.contact-location {
+    background-color: var(--color-red);
+    color: var(--color-beige);
+    text-align: center;
+    padding: 60px 15px;
+}
+
+.contact-location a {
+    color: inherit;
+    font-weight: bold;
+}
+
+.contact-location a:visited {
+    color: inherit;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--color-strongGray);
+    color: var(--color-white);
+    padding: 40px 15px;
+}
+
+/* MEDIAQUERIES */
+
+@media screen and (max-width: 858px) {
+    .menu-check-btn {
+        display: block;
+    }
+
+    header nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(208, 59, 64, .9);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #menu-check:checked ~ ul {
+        left: 0;
+    }
+}
